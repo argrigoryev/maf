@@ -16,21 +16,17 @@ body {
     margin-left: 40px;
 }
 
-#inputs_container {
+#files_input {
+    margin-right: 10px;
     margin-left: 40px;
     margin-top: 30px;
     width: 100%;
 }
 
-.file {
-    margin-bottom: 15px;
-    margin-right: 10px;
-    width: 100%;
-}
-
 #save_directory {
+    position: absolute;
     margin-left: 40px;
-    margin-top: 10px;
+    bottom: 90px;
     width: 60%;
 }
 
@@ -40,4 +36,33 @@ body {
     width: 65%;
     margin-left: 70px;
     height: 25px;
+}
+
+.delete_button {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+}
+
+#file_list {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 10px;
+    max-height: 280px;
+    overflow-y: auto;
+    width: 380px;
+}
+
+.file_field {
+    margin-top: 10px;
+}
+
+.path_field {
+    display: block;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

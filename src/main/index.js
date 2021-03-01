@@ -59,7 +59,7 @@ const createWindow = () => {
     })
 
     // FIXME: dev tools
-    // win.webContents.openDevTools({ mode: 'detach' })
+    win.webContents.openDevTools({ mode: 'detach' })
 }
 
 app.whenReady().then(createWindow)
