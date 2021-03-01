@@ -1,6 +1,8 @@
 import path from 'path'
 import { app, BrowserWindow, ipcMain } from 'electron'
 import { Merger } from 'merge'
+import { checkForUpdates } from './update'
+import { setTimeout } from 'globalthis/implementation'
 
 const createWindow = () => {
     let win = new BrowserWindow({
@@ -25,6 +27,9 @@ const createWindow = () => {
     win.loadFile('renderer/index.html')
 
     win.webContents.on('did-finish-load', () => {
+        setTimeout(() => {
+            checkForUpdates()
+        }, 2000)
         win.webContents.send('loaded', {
             appName: CONFIG.name
         })

@@ -1,5 +1,5 @@
 {
-    "name": "IFСMerger",
+    "name": "ifc_merger",
     "version": "21.1.0",
     "description": "IFC Merger application",
     "author": {
@@ -7,7 +7,7 @@
         "email": "argrigoryev@icloud.com"
     },
     "homepage": "https://www.bim-plat.de",
-    "repository": "",
+    "repository": "https://github.com/argrigoryev/maf",
     "license": "ISC",
     "devDependencies": {
         "bozon": "1.1.3",
@@ -21,18 +21,17 @@
         "productName": "IFC Merger",
         "copyright": "Copyright © 2021 Alexandr Gringoryev",
         "publish": [{
-            "prvider": "github"
+            "provider": "github"
         }],
-        "win": {
-            "publish": null
-        },
+        "win": {},
         "mac": {
-            "publish": null,
             "category": "public.app-category.productivity"
         },
         "linux": {
-            "publish": null,
             "category": "Utility"
         }
+    },
+    "dependencies": {
+        "electron-updater": "^4.3.5"
     }
 }
