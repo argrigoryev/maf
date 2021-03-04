@@ -1,6 +1,8 @@
 # IFCMerger
 
-> My IFCMerger app built with Electron
+> IFC Merger app
+
+Supported platforms: macOS 10.10 (Yosemite), Windows 7, Linux Ubuntu 14.04, Linux Fedora 24, Linux Debian 8 and newer versions
 
 
 ## Dev
@@ -13,6 +15,12 @@ $ npm install
 
 ```
 $ bozon start
+```
+
+With hot reload
+
+```
+$ bozon start -r
 ```
 
 ### Package
