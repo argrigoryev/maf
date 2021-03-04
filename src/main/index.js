@@ -6,7 +6,7 @@ import { setTimeout } from 'globalthis/implementation'
 
 const createWindow = () => {
     let win = new BrowserWindow({
-        title: CONFIG.name,
+        title: 'IFC Combiner v2.0 (only for IFC2x3)',
         width: CONFIG.width,
         height: CONFIG.height,
         minWidth: CONFIG.width,
@@ -43,7 +43,7 @@ const createWindow = () => {
         mergeFiles(data)
     })
 
-    function mergeFiles(data) {
+    const mergeFiles = data => {
         const merger = new Merger()
         try {
             merger.merge(data.files, data.directory)
@@ -58,8 +58,36 @@ const createWindow = () => {
         win.webContents.send('onGetDirname', { dirname })
     })
 
+    ipcMain.on('showInfo', () => {
+        showInfo()
+    })
+
     // FIXME: dev tools
     // win.webContents.openDevTools({ mode: 'detach' })
+}
+
+const showInfo = () => {
+    let win = new BrowserWindow({
+        title: 'IFC Combiner v2.0',
+        width: 350,
+        height: 350,
+        minWidth: 350,
+        minHeight: 350,
+        maxWidth: 350,
+        maxHeight: 350,
+        show: false,
+        webPreferences: {}
+    })
+
+    win.on('ready-to-show', () => {
+        win.show()
+    })
+
+    win.loadFile('renderer/info.html')
+
+    win.on('closed', () => {
+        win = null
+    })
 }
 
 app.whenReady().then(createWindow)

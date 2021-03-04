@@ -1,4 +1,5 @@
 import { ipcRenderer } from 'electron'
+import { window } from 'globalthis/implementation'
 
 window.onLoaded = callback => {
     ipcRenderer.on('loaded', callback)
@@ -18,4 +19,8 @@ window.merge = (files, directory) => {
 
 window.getDirname = filePath => {
     ipcRenderer.send('getDirname', { filePath })
+}
+
+window.showInfo = () => {
+    ipcRenderer.send('showInfo')
 }

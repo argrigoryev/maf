@@ -1,8 +1,10 @@
-const { document } = require('globalthis/implementation');
+const { document, window } = require('globalthis/implementation');
 
 require('application.css')
 require('logo.jpg')
 require('minus_button.png')
+require('info_button.png')
+require('icon.png')
 
 let _files = []
 
@@ -23,6 +25,7 @@ window.onMerged(success => {
 function setListeners() {
     document.getElementById('files_input').addEventListener('input', onFilesInput)
     document.getElementById('merge_button').addEventListener('click', onMergeButtonClick)
+    document.getElementById('info_button').addEventListener('click', onInfoButtonClick)
 }
 
 function onFilesInput(event) {
@@ -82,4 +85,8 @@ function onMergeButtonClick() {
     }
     const directory = document.getElementById('save_directory').value
     window.merge(file_paths, directory)
+}
+
+function onInfoButtonClick() {
+    window.showInfo()
 }

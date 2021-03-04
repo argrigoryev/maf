@@ -1,7 +1,7 @@
 {
-    "name": "ifc_merger",
+    "name": "ifc_combiner",
     "version": "21.2.0",
-    "description": "IFC Merger application",
+    "description": "IFC Combiner application",
     "author": {
         "name": "Alexandr Grigoryev",
         "email": "argrigoryev@icloud.com"
@@ -17,8 +17,8 @@
         "spectron": "13.0.0"
     },
     "build": {
-        "appId": "com.electron.ifc merger",
-        "productName": "IFC Merger",
+        "appId": "com.electron.ifc combiner",
+        "productName": "IFC Combiner",
         "copyright": "Copyright © 2021 Alexandr Gringoryev",
         "publish": [{
             "provider": "github"

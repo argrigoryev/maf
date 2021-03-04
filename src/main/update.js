@@ -10,7 +10,7 @@ export const checkForUpdates = () => {
         dialog.showMessageBox({
             type: 'info',
             title: 'Update available',
-            message: 'A new version of IFC Merger is available. Do you want to download and install it now?',
+            message: 'A new version of IFC Combiner is available. Do you want to download and install it now?',
             buttons: ['Yes', 'No']
         }).then(({ response }) => {
             if (response === 0) {

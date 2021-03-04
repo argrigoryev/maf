@@ -66,3 +66,19 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+#info_button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+#info_button:hover {
+    opacity: .9;
+}
+
+#info_button:active {
+    opacity: .8;
+}
